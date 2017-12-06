@@ -1,12 +1,14 @@
 package com.company;
-import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        FriendlyN my_numbers = new FriendlyN();
-        ArrayList<Integer> divisorsX = my_numbers.findDivisorX(50);
-
-
+        FriendlyNumbers my_numbers = new FriendlyNumbers();
+        boolean result = my_numbers.isFriendly(220,284);
+       if(result){
+           System.out.println("These numbers are friendly");
+       }else{
+           System.out.println("These numbers are not friendly" );
+       }
     }
 }
