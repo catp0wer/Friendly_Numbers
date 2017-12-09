@@ -1,18 +1,22 @@
 package com.company;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class FriendlyNumbers {
 
-    public void sendNumbers(int n){
-
+    public Map<Integer,Integer> findFriendlyPairsUpTo(int n){
+        Map<Integer,Integer> result = new HashMap<>();
         for(int i=n; i>0;i--){
             for(int j=0;j<=n;j++){
+
                 if(isFriendly(i,j)){
-                    System.out.println("i " + i +" and j " + j + " are friendly ");
+                    result.put(i,j);
                 }
             }
-        }
+        }return result;
     }
 
     private ArrayList<Integer> findDivisors(int number) {
